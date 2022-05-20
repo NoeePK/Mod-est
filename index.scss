@@ -23,17 +23,27 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
-li {
-    cursor: pointer;
-    transform: none;
-    transition: all 350ms ease-in-out;
-
-    &:hover {
-        transform: rotate(-20deg);
-    }
+#Panel__1, .visibleContent {
+    font-size: 1.3em;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    border: 2px solid white;
+    margin: auto;
 }
+
+#Panel__1, #Panel__2, #Panel__3, #Panel__4 {
+    display: none;
+}
+
+
+
+
+
 
 section {
     @include ScreenSharing($primaryColor, white);
@@ -43,20 +53,21 @@ section {
     background-repeat: no-repeat;
     height: 600px;
 }
-
+ 
 h1 {
     @include BasicText ($bigTitles, $primaryColor, $secondaryColor);
     text-align: left;
     margin-left: 3%;
+    
 
 }
 
 h2 {
     @include BasicText($mediumTitles, $primaryColor, $secondaryColor);
     text-align: right;
-    margin-right: 3%;
-    
+    margin-right: 2%;  
 }
+
 
 .separator {
     background-color: black;
