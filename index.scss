@@ -1,0 +1,70 @@
+@import"sass/variables";
+@import"sass/mixins";
+
+html {
+    background-color: white;
+}
+
+body {
+    background-color: black;
+    width: 99%;
+}
+
+header {
+    @include ScreenSharing($secondaryColor, white);
+}
+
+nav {
+    @include BasicText ($smallTitles, $secondaryColor, $primaryColor)
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    cursor: pointer;
+    transform: none;
+    transition: all 350ms ease-in-out;
+
+    &:hover {
+        transform: rotate(-20deg);
+    }
+}
+
+section {
+    @include ScreenSharing($primaryColor, white);
+    background-image: url("/images/model3.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+h1 {
+    @include BasicText ($bigTitles, $primaryColor, $secondaryColor);
+    text-align: left;
+    margin-left: 3%;
+
+}
+
+h2 {
+    @include BasicText($mediumTitles, $primaryColor, $secondaryColor);
+    text-align: right;
+    margin-right: 3%;
+    
+}
+
+.separator {
+    background-color: black;
+    height: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+}

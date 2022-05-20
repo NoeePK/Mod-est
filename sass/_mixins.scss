@@ -1,0 +1,12 @@
+@mixin ScreenSharing ($bgColor, $borderColor ) {
+    background-color: $bgColor;
+    border-bottom: 3px solid $borderColor;
+    border-top: 3px solid $borderColor;
+}
+
+@mixin BasicText ($size, $shadowColor1, $shadowColor2) {
+    color: white;
+    font-size: $size;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 3px 0 $shadowColor1, 1px 13px 5px $shadowColor2;
+}
