@@ -1,3 +1,5 @@
-const show = function showContent(panel) {
-    document.getElementById(panel).style.display = "block";
-  }
+
+/*
+function showHiddenContent() {
+    document.getElementById("panel").style.display = "block";
+  }*/

@@ -14,34 +14,39 @@ header {
     @include ScreenSharing($secondaryColor, white);
 }
 
-nav {
-    @include BasicText ($smallTitles, $secondaryColor, $primaryColor)
-}
-
-.nav {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-
-#Panel__1, .visibleContent {
-    font-size: 1.3em;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.493);
-    color: white;
-    border: 2px solid white;
-    margin: auto;
-}
-
-#Panel__1, #Panel__2, #Panel__3, #Panel__4 {
+/* Dropdown Button */
+.dropbtn {
+    @include BasicText ($smallTitles, $secondaryColor, $primaryColor);
+    background-color: $secondaryColor;
+    padding: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropdown-content {
+      display: block;}
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
     display: none;
-}
-
-
-
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
 
 
@@ -49,23 +54,23 @@ section {
     @include ScreenSharing($primaryColor, white);
     background-image: url("/images/model3.jpg");
     background-size: cover;
-    background-position:bottom;
+    background-position: bottom;
     background-repeat: no-repeat;
     height: 600px;
 }
- 
+
 h1 {
     @include BasicText ($bigTitles, $primaryColor, $secondaryColor);
     text-align: left;
     margin-left: 3%;
-    
+
 
 }
 
 h2 {
     @include BasicText($mediumTitles, $primaryColor, $secondaryColor);
     text-align: right;
-    margin-right: 2%;  
+    margin-right: 2%;
 }
 
 
